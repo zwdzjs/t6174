@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>京东登录</title>
+		<style type="text/css">
+			* {
+				 margin: 0;
+				 padding: 0;
+			 }
+			
+			body {
+				overflow-x: hidden;
+				overflow-y: hidden;
+			}
+			
+			.banner-bg {
+				position: relative;
+				width: 100%;
+				top: 5px;
+				background-color: rgb(190, 216, 189);
+			}
+			
+			.banner-bg img {
+				position: relative;
+				left: 242px;
+			}
+			
+			.tips {
+				position: relative;
+				top: 5px;
+				height: 19px;
+				background-color: rgb(255, 248, 240);
+			}
+			
+			.tips p {
+				position: relative;
+				font-size: 6px;
+				text-align: center;
+				top: 5px;
+				color: gray;
+			}
+			
+			.tips p img {
+				position: relative;
+				top: 2px;
+			}
+			
+			.tips p a {
+				text-decoration: none;
+				color: black;
+			}
+			
+			.tips p a:hover {
+				text-decoration: none;
+				color: red;
+			}
+			
+			.logo {
+				position: relative;
+				top: 0;
+				left: 220px;
+			}
+			
+			.welcome {
+				position: relative;
+				top: 35px;
+				left: 340px;
+				font-size: 15px;
+			}
+			
+			.question a {
+				text-decoration: none;
+				color: gray;
+				font-size: 7px;
+			}
+			
+			.question p img {
+				float: left;
+			}
+			
+			.question {
+				position: relative;
+				top: 65px;
+				left: 650px;
+			}
+			
+			.question a:hover {
+				color: red;
+				text-decoration: underline;
+			}
+			
+			.tipe-1 {
+				background-color: rgb(255, 248, 240);
+				width: 180px;
+				height: 19px;
+				font-size: 7px;
+				z-index: 1;
+				position: relative;
+			}
+			
+			.tipe-1 p {
+				position: relative;
+				color: #999;
+				text-align: center;
+				top: 3px;
+				font-size: 7px;
+			}
+			
+			.tipe-1 p img {
+				position: relative;
+				top: 3px;
+			}
+			
+			.tipe-2 {
+				background-color: rgb(252, 252, 252);
+				width: 180px;
+				height: 19px;
+				font-size: 7px;
+				z-index: 1;
+				position: relative;
+				top: 35px;
+			}
+			
+			.tipe-2 .a1 {
+				position: relative;
+				top: 2px;
+				left: 10px;
+				text-decoration: none;
+				color: black;
+			}
+			
+			.tipe-2 .a1 img {
+				position: relative;
+				top: 2px;
+			}
+			
+			.tipe-2 .a2 {
+				position: relative;
+				top: 2px;
+				left: 20px;
+				text-decoration: none;
+				color: black;
+			}
+			
+			.tipe-2 .a2 img {
+				position: relative;
+				top: 2px;
+			}
+			
+			.tipe-2 .a3 {
+				position: relative;
+				top: 2px;
+				left: 80px;
+				text-decoration: none;
+				color: red;
+				font-size: 8px;
+			}
+			
+			.tipe-2 .a3 img {
+				position: relative;
+				top: 2px;
+			}
+			
+			.tipe-2 span {
+				position: relative;
+				left: 15px;
+				top: 2px;
+			}
+			
+			.tipe-2 .a1:hover {
+				text-decoration: underline;
+				color: red;
+			}
+			
+			.tipe-2 .a2:hover {
+				text-decoration: underline;
+				color: red;
+			}
+			
+			.tipe-2 .a3:hover {
+				text-decoration: underline;
+			}
+			
+			.bottom a {
+				position: relative;
+				text-decoration: none;
+				font-size: 5px;
+				margin-right: 4px;
+				margin-left: 4px;
+				color: gray;
+			}
+			
+			.bottom a:hover {
+				color: red;
+				text-decoration: underline;
+			}
+			
+			.bottom {
+				font-size: 5px;
+				position: relative;
+				top: 20px;
+				left: 250px;
+			}
+			
+			.copyright {
+				position: relative;
+				font-size: 6px;
+				color: gray;
+				left: 370px;
+				top: 30px;
+			}
+			
+			.login-form {
+				width: 180px;
+				height: 200px;
+				background-color: white;
+				position: relative;
+				left: 540px;
+				top: -237px;
+			}
+			
+			.login-1 {
+				width: 180px;
+				height: 25px;
+				background-color: white;
+				font-size: 10px;
+			}
+			
+			.login-1 a {
+				margin-right: 20px;
+				margin-left: 25px;
+				text-decoration: none;
+				color: gray;
+				position: relative;
+				top: 5px;
+			}
+			
+			.login-1 a:hover {
+				color: red;
+			}
+			
+			.login-1 span {
+				position: relative;
+				top: 5px;
+			}
+			
+			#account {
+				width: 160px;
+				height: 140px;
+				background-color: white;
+				margin: auto auto;
+				line-height: 10px;
+				display: none;
+			}
+			
+			#account img {
+				position: relative;
+				top: 10px;
+				left: 5px;
+			}
+			
+			.d2 {
+				position: relative;
+				top: 0px;
+			}
+			
+			.d1 {
+				position: relative;
+				top: -5px;
+			}
+			
+			.sef {
+				position: relative;
+				top: 20px;
+				left: 120px;
+				font-size: 5px;
+				text-decoration: none;
+				color: gray;
+			}
+			
+			.sef a {
+				text-decoration: none;
+				color: gray;
+			}
+			
+			.sef a:hover {
+				color: red;
+			}
+			
+			.qrcode-main {
+				width: 160px;
+				height: 100px;
+				padding: 0 5px;
+				position: relative;
+				border: 1px solid rgb(244, 244, 244);
+				overflow: hidden;
+				left: -10px;
+				border: none;
+			}
+			
+			.qrcode-main .qrcode-img {
+				position: absolute;
+				padding: 8px;
+				left: 0;
+				border: 1px solid rgb(244, 244, 244);
+				border: none;
+			}
+			
+			.qrcode-main .qrcode-help {
+				position: absolute;
+				left: 110px;
+				top: 10px;
+				display: none;
+				border: none;
+			}
+			.qrcode-main p{
+				font-size: 8px;
+				position: relative;
+				top: 90px;
+				left: 40px;
+			}
+			.qrcode-main p a{
+				color: red;
+				text-decoration: none;
+			}
+			.commit{
+				position: relative;
+				top: 30px;
+				left:6px;
+				width: 140px;
+				height: 20px;
+				background-color: red;
+				font-size:12px;
+				text-align: center;
+				line-height: 20px;
+			}			.commit a{
+				color: white;
+				text-decoration: none;
+			}
+			.i1{
+				position: relative;
+				top: 20px;
+				left: 40px;
+				z-index: 5;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="question">
+			<img src="img/q-icon.png" width="7px" height="7px" />
+			<a href="#">登录页面，调查问卷</a>
+		</div>
+		<div class="welcome">
+			<p>欢迎登录</p>
+		</div>
+		<div class="logo">
+			<img src="img/logo.png" width="110px" height="35px" />
+		</div>
+		<div class="tips">
+			<p><img src="img/icon-tips.png" width="8px" height="8px" />依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版
+				<a href="#">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。</p>
+		</div>
+		<div class="banner-bg">
+			<img src="img/京东登录页面.jpg" width="450px" height="230px" />
+		</div>
+
+		<div class="bottom">
+			<a href="#">关于我们</a>|
+			<a href="#">联系我们</a>|
+			<a href="#">人才招聘</a>|
+			<a href="#">商家入驻</a>|
+			<a href="#">广告服务</a>|
+			<a href="#">手机京东</a>|
+			<a href="#">友情链接</a>|
+			<a href="#">销售联盟</a>|
+			<a href="#">京东社区</a>|
+			<a href="#">京东公益</a>|
+			<a href="#">English Site</a>
+		</div>
+		<div class="copyright">
+			Copyright © 2004-2018 京东JD.com 版权所有
+		</div>
+		<div class="login-form">
+			<div class="tipe-1">
+				<p><img src="img/icon-tips.png" width="10px" height="10px" />京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
+			</div>
+			<div class="login-1">
+				<a href="#" class="aa">扫码登录</a><span>|</span>
+				<a href="#" class="bb">账户登录</a>
+			</div>
+			<div id="account">
+				<div class="d1">
+					<img src="img/用户名.jpg" width="25px" height="25px" />
+					<input type="text" id="userName" placeholder="邮箱\电话号码\用户名" size="20" style="height: 19px;font-size: 9px;" />
+				</div>
+				<div class="d2">
+					<img src="img/密码.jpg" width="25px" height="25px" id="img1" />
+					<input type="password" id="pwd" placeholder="密码" size="20" style="height: 19px;font-size: 9px;" />
+				</div>
+				<div class="sef">
+					<a href="#">忘记密码</a>
+				</div>
+				<div class="commit"><a href="#">登录</a></div>
+			</div>
+			<div class="qrcode-main">
+				<div class="qrcode-img" style="left:60px;">
+					<img src="img/show.png" alt="" width="65px" height="65px">
+				</div>
+				<div class="qrcode-help">
+					<img src="img/phone-orange.png" width="65px" height="65px"/>
+				</div>
+				<p>打开<a>手机京东</a>，扫描二维码</p>
+
+			</div>
+			<div class="i1"><img src="img/京东.png" alt="" width="104" height="17"></div>
+			<div class="tipe-2">
+				<a href="#" class="a1"><img src="img/qq.jpg" width="10px" height="10px" />QQ</a>
+				<span>|</span>
+				<a href="#" class="a2"><img src="img/微信.jpg" width="10px" height="10px" />微信</a>
+				<a href="#" class="a3"><img src="img/右箭头.jpg" width="10px" height="10px" />立即注册</a>
+			</div>
+		</div>
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".aa").click(function() {
+					$(this).css("color", "red");
+					$(".bb").css("color", "gray");
+					$(".qrcode-main").show();
+					$("#account").hide();
+				});
+				$(".bb").click(function() {
+					$(this).css("color", "red");
+					$(".aa").css("color", "gray");
+					$(".qrcode-main").hide();
+					$("#account").show();
+				});
+				$(".login-1 a").hover(function() {
+					$(this).css("color", "red");
+				});
+				$(".qrcode-main").mouseover(function() {
+					$(".qrcode-img").stop().animate({
+						"left": "15"
+					}, 300, function() {
+						$(".qrcode-help").show();
+					});
+				}).mouseleave(function() {
+					$(".qrcode-help").hide();
+					$(".qrcode-img").stop().animate({
+						"left": "60"
+					}, 300);
+				});
+			});
+		</script>
+	</body>
+</html>
